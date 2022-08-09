@@ -29,13 +29,6 @@ Additionally for every major version, there is a specific latest tag, e.g. `stea
 Please refer to the [Docker Hub page](https://hub.docker.com/r/unitedplanet/intrexx-admin-api) for a complete list of available tags.
 
 # List of environment vars
-ENV IAA_DEBUG_MODE=false
-ENV CACERTS_PATH=UNDEFINED
-ENV CACERTS_PW=changeit
-ENV IAA_SECRET=changeit
-
-
-
 Name | Default value | Description
 --- | --- | ---
 `PORTAL_NAME` | portal | The name of the portal to administer.
