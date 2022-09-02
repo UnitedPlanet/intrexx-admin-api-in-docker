@@ -8,7 +8,7 @@ Run the Intrexx Admin API in Docker to manager your Intrexx portal via a REST AP
 A new instance of the Intrexx Admin API can be created as simply as follows:
 
 ```bash
-docker run -e CACERTS_PATH=${PATH_TO_CACERTS_FILE} --name admin-api -d -P unitedplanet/intrexx-admin-api:steady-latest
+docker run -e CACERTS_PATH=${PATH_TO_CACERTS_FILE} --name admin-api -d -p 4242:4242 unitedplanet/intrexx-admin-api:steady-latest
 ```
 
 Providing a keystore, containing a valid certificate for the host is mandatory. Aside from that, some configuration parameters are expected to be provided via environment vars.
