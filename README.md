@@ -10,6 +10,10 @@ A new instance of the Intrexx Admin API can be created as simply as follows:
 ```bash
 docker run -e CACERTS_PATH=${PATH_TO_CACERTS_FILE} --name admin-api -d -p 4242:4242 unitedplanet/intrexx-admin-api:steady-latest
 ```
+or (creating a self-signed certificate)
+```bash
+docker run -e CACERTS_SAN_LIST="dns:my.iaa.host ip:10.11.12.13" --name admin-api -d -p 4242:4242 unitedplanet/intrexx-admin-api:steady-latest
+```
 
 Providing a keystore, containing a valid certificate for the host is mandatory. Aside from that, some configuration parameters are expected to be provided via environment vars.
 
@@ -42,4 +46,5 @@ Name | Default value | Description
 `IAA_DEBUG_MODE` | false | Set this to true, to enable debug mode of the Intrexx Admin API.
 `CACERTS_PATH` | UNDEFINED | Path of the keystore containing the Admin API Hosts certificate (within the container).
 `CACERTS_PW` | changeit | Password for the keystore containing the Admin API Hosts certificate.
+`CACERTS_SAN_LIST` |  | Parameter list for creating a self-signed certificate. Elements must begin with ip: or dns: .
 `IAA_SECRET` | changeit | Secret used to encode the JWTs.
