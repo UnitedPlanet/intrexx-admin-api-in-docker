@@ -48,3 +48,4 @@ Name | Default value | Description
 `CACERTS_PW` | changeit | Password for the keystore containing the Admin API Hosts certificate.
 `CACERTS_SAN_LIST` |  | Parameter list for creating a self-signed certificate. Elements must begin with ip: or dns: .
 `IAA_SECRET` | changeit | Secret used to encode the JWTs.
+`IAA_USE_SSL` | true | Boolean Parameter to optionally disable SSL.
