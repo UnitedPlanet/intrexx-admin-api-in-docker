@@ -49,3 +49,4 @@ Name | Default value | Description
 `CACERTS_SAN_LIST` |  | Parameter list for creating a self-signed certificate. Elements must begin with ip: or dns: .
 `IAA_SECRET` | changeit | Secret used to encode the JWTs.
 `IAA_USE_SSL` | true | Boolean Parameter to optionally disable SSL.
+`IAA_LICENSE` | NONE | License key for IAA, needed in version 11.0.0 and newer.
